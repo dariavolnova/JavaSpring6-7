@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>One User</title>
+</head>
+<body>
+<p th:text="'Username: ' + ${user.getUsername()}"></p>
+<p th:text="'Age: ' + ${user.getAge()}"></p>
+<p th:text="'Password: ' + ${user.getPassword()}"></p>
+<form method="get" th:action="@{/users/{id}/edit(id=${user.getId()})}">
+    <input type="submit" value="Edit User" />
+</form>
+</body>
+</html>
